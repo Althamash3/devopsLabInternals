@@ -2,10 +2,14 @@ pipeline {
   agent any
   stages {
     stage('Check') {
-      bat 'python --version'
+      steps{
+        bat 'python --version'
+      }
     }
     stage('Build'){
-      bat 'python file.py'
+      steps{
+        bat 'python file.py'
+      }
     }
   }
 }
